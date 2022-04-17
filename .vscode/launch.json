@@ -1,0 +1,72 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "[prod] flutter-boiler-plate",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_production.dart",
+            "args": [
+                "--flavor",
+                "production",
+                "--target",
+                "lib/main_production.dart",
+                "--web-renderer",
+                "html",
+            ]
+        },
+        {
+            "name": "[dev] flutter-boiler-plate",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "args": [
+                "--flavor",
+                "development",
+                "--target",
+                "lib/main_development.dart",
+                "--web-renderer",
+                "html",
+            ]
+        },
+        {
+            "name": "flutter-boiler-plate (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "lib/main_production.dart",
+            "args": [
+                "--flavor",
+                "production",
+                "--target",
+                "lib/main_production.dart",
+                "--web-renderer",
+                "html",
+            ]
+        },
+        {
+            "name": "Chrome",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "chrome",
+        },
+        {
+            "name": "MI PAD 4",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "94ffca87",
+        }
+    ],
+    "compounds": [
+        {
+            "name": "All Devices",
+            "configurations": [
+                "Chrome",
+                "MI PAD 4"
+            ]
+        }
+    ]
+}
