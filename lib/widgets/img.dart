@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_boiler_plate/utils/constants.dart' as cons;
-import 'package:flutter_boiler_plate/utils/wgt.dart';
+import 'package:pokedex/utils/constants.dart' as cons;
+import 'package:pokedex/utils/wgt.dart';
 import 'package:cached_network_image_platform_interface/cached_network_image_platform_interface.dart';
 
 enum ImageQuality {

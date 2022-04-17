@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_boiler_plate/utils/constants.dart';
+import 'package:pokedex/utils/constants.dart';
 
 import 'button.dart';
 

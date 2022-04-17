@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boiler_plate/utils/constants.dart';
-import 'package:flutter_boiler_plate/utils/extensions.dart';
+import 'package:pokedex/utils/constants.dart';
+import 'package:pokedex/utils/extensions.dart';
 
 class CellOutlet extends StatelessWidget {
   final String title;

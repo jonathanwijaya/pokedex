@@ -1,5 +1,5 @@
 
-import 'package:flutter_boiler_plate/models/example_model-2.dart';
+import 'package:pokedex/models/example_model-2.dart';
 
 class ExampleModel {
   int id;

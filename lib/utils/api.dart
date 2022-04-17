@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_boiler_plate/utils/base_api.dart';
-import 'package:flutter_boiler_plate/utils/base_controllers.dart';
+import 'package:pokedex/utils/base_api.dart';
+import 'package:pokedex/utils/base_controllers.dart';
 
 String _baseUrl = dotenv.env["BASE_URL"] ?? 'https://www.example.com';
 

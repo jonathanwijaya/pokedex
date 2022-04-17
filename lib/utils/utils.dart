@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:flutter_boiler_plate/screens/home.dart';
-import 'package:flutter_boiler_plate/widgets/button.dart';
-import 'package:flutter_boiler_plate/widgets/gradient_button.dart';
-import 'package:flutter_boiler_plate/widgets/img.dart';
+import 'package:pokedex/screens/home.dart';
+import 'package:pokedex/widgets/button.dart';
+import 'package:pokedex/widgets/gradient_button.dart';
+import 'package:pokedex/widgets/img.dart';
 import '../widgets/confirm_dialog.dart';
-import 'package:flutter_boiler_plate/utils/example_keys.dart';
+import 'package:pokedex/utils/example_keys.dart';
 import '/utils/constants.dart';
 
 import 'constants.dart';

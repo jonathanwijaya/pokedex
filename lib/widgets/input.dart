@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_boiler_plate/utils/constants.dart';
+import 'package:pokedex/utils/constants.dart';
 
 // ignore: must_be_immutable
 class Input extends StatefulWidget {

@@ -1,5 +1,5 @@
 
-import 'package:flutter_boiler_plate/models/example_model-3.dart';
+import 'package:pokedex/models/example_model-3.dart';
 
 class ExampleModel2 {
   int position;

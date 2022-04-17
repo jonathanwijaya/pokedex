@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:get/get_connect.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:flutter_boiler_plate/utils/example_keys.dart';
+import 'package:pokedex/utils/example_keys.dart';
 
 import 'base_controllers.dart';
 

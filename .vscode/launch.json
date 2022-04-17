@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "[prod] flutter-boiler-plate",
+            "name": "[prod] pokedex",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_production.dart",
@@ -19,7 +19,7 @@
             ]
         },
         {
-            "name": "[dev] flutter-boiler-plate",
+            "name": "[dev] pokedex",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_development.dart",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "name": "flutter-boiler-plate (profile mode)",
+            "name": "pokedex (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",

@@ -1,5 +1,5 @@
 ## TODO CHANGE BOILER PLATE NAME
-# flutter_boiler_plate
+# pokedex
 
 A new Flutter project.
 

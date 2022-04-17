@@ -1,6 +1,6 @@
 {
-    "name": "flutter_boiler_plate",
-    "short_name": "flutter_boiler_plate",
+    "name": "pokedex",
+    "short_name": "pokedex",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

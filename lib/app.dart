@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_boiler_plate/utils/constants.dart';
-import 'package:flutter_boiler_plate/utils/utils.dart';
-import 'package:flutter_boiler_plate/utils/wgt.dart';
+import 'package:pokedex/utils/constants.dart';
+import 'package:pokedex/utils/utils.dart';
+import 'package:pokedex/utils/wgt.dart';
 
 enum Environment {
   development,

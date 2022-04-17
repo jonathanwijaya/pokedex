@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boiler_plate/utils/constants.dart';
+import 'package:pokedex/utils/constants.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 
 class CustomPinField extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_boiler_plate/widgets/widget_not_found.dart';
+import 'package:pokedex/widgets/widget_not_found.dart';
 
 import 'constants.dart';
 import 'wgt.dart';

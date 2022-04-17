@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_boiler_plate/utils/constants.dart';
-import 'package:flutter_boiler_plate/utils/extensions.dart';
-import 'package:flutter_boiler_plate/widgets/button.dart';
+import 'package:pokedex/utils/constants.dart';
+import 'package:pokedex/utils/extensions.dart';
+import 'package:pokedex/widgets/button.dart';
 
 class WidgetNotFound extends StatelessWidget {
   final String title;

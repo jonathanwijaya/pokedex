@@ -1,5 +1,5 @@
 
-import 'package:flutter_boiler_plate/utils/base_controllers.dart';
+import 'package:pokedex/utils/base_controllers.dart';
 // import 'package:permission_handler/permission_handler.dart';
 
 class HomeController extends BaseControllers {

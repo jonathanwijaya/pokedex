@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:flutter_boiler_plate/app.dart';
+import 'package:pokedex/app.dart';
 
 Future<void> mainCommon(Environment flavor) async {
   if (!kIsWeb) {
