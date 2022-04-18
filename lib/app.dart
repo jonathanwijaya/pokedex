@@ -59,7 +59,7 @@ class HWApp extends StatelessWidget {
           onPrimary: kColorTextBlack,
           onSurface: kColorTextWhite,
         ),
-        textTheme: GoogleFonts.poppinsTextTheme(
+        textTheme: GoogleFonts.vt323TextTheme(
           const TextTheme(
             headline1: kStyleHeadline1,
             headline2: kStyleHeadline2,

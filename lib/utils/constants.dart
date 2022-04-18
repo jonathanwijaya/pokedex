@@ -212,8 +212,22 @@ BoxShadow customBoxShadow = BoxShadow(
 const kImageBGPopup = 'assets/bg_pop_up.png';
 const kImageSearchNotFound = 'assets/search_not_found.svg';
 const kDevFlag = 'assets/dev-flag.png';
+const kPokemonLogo = 'assets/pokemon_logo.png';
+const kPokemonLogoSize = 150.0;
+const kBackgroundImage = 'assets/background_image.png';
+const kPikachuImage = 'assets/pikachu.png';
+const kProfessorOakImage = 'assets/professor_oak.png';
 
-const kLottieBoxLoader = 'assets/lottie_box_loader.json';
+const kImageXS = 25.0;
+const kImageS = 50.0;
+const kImageM = 75.0;
+const kImageL = 100.0;
+const kImageXL = 125.0;
+
+const kLottieBoxLoader = 'assets/loading.json';
+
+//regionMap
+const kKantoMap = 'assets/kanto.png';
 
 // Enum
 enum ControllerState {

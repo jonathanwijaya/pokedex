@@ -6,17 +6,19 @@ import 'package:pokedex/utils/base_controllers.dart';
 String _baseUrl = dotenv.env["BASE_URL"] ?? 'https://www.example.com';
 
 class Api extends BaseApi {
-  final String _exampleUrl = _baseUrl + 'example/';
+  String _pokedexUrl = _baseUrl + 'pokedex/';
 
-  //Fetch API Example
-  Future<void> exampleApiFetch({
+  //Fetch Pokedex
+  Future<void> fetchPokedex({
     required BaseControllers controllers,
-    required String exampleParams,
-  }) =>
-      apiFetch(
-        url: '$_exampleUrl/example?params=$exampleParams',
-        controller: controllers,
-      );
+  }) {
+    print('test');
+    print(_pokedexUrl);
+    return apiFetch(
+      url: '$_pokedexUrl' + '2',
+      controller: controllers,
+    );
+  }
 
   //Post API Example
   Future<void> exampleApiPost({
@@ -25,14 +27,14 @@ class Api extends BaseApi {
     code,
   }) =>
       apiPost(
-        url: baseUrl ?? ' ',
+        url: baseUrl ?? '',
         controller: controllers,
         data: {'example': example},
       );
 
   Future<void> exampleEditPost({required BaseControllers controllers, id, notes, code}) {
     return apiPut(
-      url: _exampleUrl,
+      url: baseUrl ?? '',
       controller: controllers,
       data: {
         'example_id': id,

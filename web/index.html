@@ -34,18 +34,66 @@
     -->
   <title>pokedex</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    @keyframes spin-horizontal {
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    #grad1 {
+      height: 500px;
+      /* For browsers that do not support gradients */
+      background-image: linear-gradient(#ee4131, #f0f0f0);
+    }
+
+    .title {
+      color: #b1b1b1;
+      text-align: center;
+      font-family: "Open Sans";
+    }
+
+    .center {
+      top: 50%;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: -150px;
+      width: 350px;
+      position: absolute;
+    }
+
+    .center-title {
+      top: 50%;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: 110px;
+      width: 350px;
+      position: absolute;
+    }
+  </style>
 </head>
 
-<body>
+<body id="grad1">
 
   <!-- LOADER -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <div class="center">
-    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_z26eqzet.json" background="transparent" speed="1"
-      style="width: 350px; height: 350px" loop autoplay></lottie-player>
+    <lottie-player src="loading.json" background="transparent" speed="1" style="width: 350px; height: 350px" loop
+      autoplay></lottie-player>
   </div>
-  <h2 class="center-title title">Sedang proses...</h2>
   <!-- LOADER END -->
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
