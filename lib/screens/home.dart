@@ -1,7 +1,10 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:pokedex/controllers/home_controller.dart';
 import 'package:pokedex/utils/constants.dart';
+import 'package:pokedex/widgets/background_music_player.dart';
 import 'package:pokedex/widgets/fade_in_image_custom.dart';
+import 'package:pokedex/widgets/profressor_oak_dialog.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -10,9 +13,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // HomeController _controller = Get.put(HomeController());
+    HomeController _controller = Get.put(HomeController());
     return SafeArea(
       child: Scaffold(
+        floatingActionButton: BackgroundMusicPlayer(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         body: DecoratedBox(
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -25,115 +30,37 @@ class HomeScreen extends StatelessWidget {
               return [
                 SliverAppBar(
                   pinned: true,
-                  snap: false,
+                  snap: true,
                   floating: true,
                   expandedHeight: 160.0,
                   flexibleSpace: FlexibleSpaceBar(
                     background: _logoAnimated(),
                   ),
                 ),
-                // SliverToBoxAdapter(
-                //   child: Center(
-                //     child: _animatedText(),
-                //   ),
-                // ),
+                SliverPersistentHeader(
+                  pinned: true,
+                  floating: true,
+                  delegate: Delegate(Colors.transparent, 'Text'),
+                ),
               ];
             },
-            body: Container(child: Builder(builder: (context) {
+            body: Builder(builder: (context) {
               return Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
-                    children: [
-                      Container(
-                        height: kImageM,
-                        child: Image(
-                          image: AssetImage(kProfessorOakImage),
-                        ),
-                      ),
-                      _professorOakDialog(),
-                    ],
-                  ),
                   Container(
-                    color: Colors.blue,
+                    height: kImageXL,
+                    child: Image(
+                      image: AssetImage(kProfessorOakImage),
+                    ),
                   ),
+                  ProfessorOakDialog(),
                 ],
               );
-            })),
+            }),
           ),
         ),
       ),
-    );
-  }
-
-  Container _professorOakDialog() {
-    return Container(
-      decoration: BoxDecoration(
-          color: kColorTextWhite,
-          borderRadius: BorderRadius.all(kSizeBorderRadiusS),
-          border: Border.all(
-            color: Colors.blueAccent,
-            width: 10,
-          )),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          AnimatedTextKit(
-            animatedTexts: [
-              TypewriterAnimatedText(
-                'Welcome to the world of Pokémon!',
-                textStyle: kStyleHeadline1.copyWith(color: kColorTextBlack),
-                speed: const Duration(milliseconds: 100),
-              ),
-              TypewriterAnimatedText(
-                'My name is Oak! People call me the pokémon Prof!',
-                textStyle: kStyleHeadline1.copyWith(color: kColorTextBlack),
-                speed: const Duration(milliseconds: 100),
-              ),
-              TypewriterAnimatedText(
-                'This world is inhabited by creatures called pokémon!',
-                textStyle: kStyleHeadline1.copyWith(color: kColorTextBlack),
-                speed: const Duration(milliseconds: 100),
-              ),
-              TypewriterAnimatedText(
-                'For some people, pokémon are pets.',
-                textStyle: kStyleHeadline1.copyWith(color: kColorTextBlack),
-                speed: const Duration(milliseconds: 100),
-              ),
-              TypewriterAnimatedText(
-                'Others use them for fights.',
-                textStyle: kStyleHeadline1.copyWith(color: kColorTextBlack),
-                speed: const Duration(milliseconds: 100),
-              ),
-              TypewriterAnimatedText(
-                'Myself...I study pokémon as a profession.',
-                textStyle: kStyleHeadline1.copyWith(color: kColorTextBlack),
-                speed: const Duration(milliseconds: 100),
-              ),
-            ],
-            totalRepeatCount: 1,
-            pause: const Duration(microseconds: 500),
-            displayFullTextOnTap: true,
-          ),
-          Icon(Icons.smart_button,color: kColorTextBlack,),
-        ],
-      ),
-    );
-  }
-
-  Widget _animatedText() {
-    return AnimatedTextKit(
-      animatedTexts: [
-        TypewriterAnimatedText(
-          'Welcome to Pokémon world!',
-          textStyle: kStyleHeadline1.copyWith(color: kColorTextBlack),
-          speed: const Duration(milliseconds: 100),
-        ),
-      ],
-      totalRepeatCount: 1,
-      pause: const Duration(milliseconds: 1000),
-      displayFullTextOnTap: false,
-      stopPauseOnTap: false,
     );
   }
 
@@ -147,6 +74,40 @@ class HomeScreen extends StatelessWidget {
         duration: 500,
       ),
     );
+  }
+}
+
+class Delegate extends SliverPersistentHeaderDelegate {
+  final Color backgroundColor;
+  final String headerTitle;
+
+  Delegate(this.backgroundColor, this.headerTitle);
+
+  @override
+  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return Container(
+      color: backgroundColor,
+      child: Center(
+        child: Text(
+          headerTitle,
+          style: const TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  double get maxExtent => 50;
+
+  @override
+  double get minExtent => 50;
+
+  @override
+  bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) {
+    return true;
   }
 }
 

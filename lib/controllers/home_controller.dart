@@ -26,7 +26,6 @@ class HomeController extends BaseControllers {
   void load() {
     // TODO: implement load
     super.load();
-    print('masuk');
     api.fetchPokedex(
       controllers: this,
     );

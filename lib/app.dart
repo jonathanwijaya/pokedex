@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pokedex/screens/home.dart';
 import 'package:pokedex/utils/constants.dart';
-import 'package:pokedex/utils/utils.dart';
 import 'package:pokedex/utils/wgt.dart';
 
 enum Environment {
@@ -24,7 +24,8 @@ class App extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          HWApp(
+          PokedexApp(
+            home: HomeScreen(),
             flavor: flavor,
           ),
           if (flavor == Environment.development) IgnorePointer(child: Wgt.devWaterMark()),
@@ -34,13 +35,14 @@ class App extends StatelessWidget {
   }
 }
 
-class HWApp extends StatelessWidget {
+class PokedexApp extends StatelessWidget {
+  final Widget home;
   final Environment flavor;
-  static RxBool isLoggedIn = false.obs;
 
-  const HWApp({
+  const PokedexApp({
     Key? key,
     required this.flavor,
+    required this.home,
   }) : super(key: key);
 
   @override
@@ -48,7 +50,7 @@ class HWApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     return GetMaterialApp(
       debugShowCheckedModeBanner: flavor == Environment.development,
-      title: 'Holywings',
+      title: 'Pokémon',
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: kColorPrimaryBg,
@@ -106,25 +108,7 @@ class HWApp extends StatelessWidget {
           ),
         ),
       ),
-      builder: (context, child) {
-        if (child == null) return Container();
-        return Obx(
-          () {
-            if (HWApp.isLoggedIn.isFalse) {
-              return child;
-            }
-
-            return Scaffold(
-              body: Row(
-                children: [
-                  Expanded(child: child),
-                ],
-              ),
-            );
-          },
-        );
-      },
-      home: Utils.getInitialHome(),
+      home: home,
     );
   }
 }

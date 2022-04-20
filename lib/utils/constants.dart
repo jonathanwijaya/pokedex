@@ -226,6 +226,9 @@ const kImageXL = 125.0;
 
 const kLottieBoxLoader = 'assets/loading.json';
 
+//BGM
+const kPokemonThemeSong = 'assets/pokemon_theme_song.mp3';
+
 //regionMap
 const kKantoMap = 'assets/kanto.png';
 

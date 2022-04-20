@@ -12,7 +12,6 @@ class Api extends BaseApi {
   Future<void> fetchPokedex({
     required BaseControllers controllers,
   }) {
-    print('test');
     print(_pokedexUrl);
     return apiFetch(
       url: '$_pokedexUrl' + '2',
